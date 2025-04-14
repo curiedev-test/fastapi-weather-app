@@ -17,7 +17,10 @@ Your task is to:
 
 - Docker
 - [minikube](https://minikube.sigs.k8s.io/docs/start/?arch=%2Fmacos%2Farm64%2Fstable%2Fbinary+download)
-- [kubectl](https://kubernetes.io/docs/tasks/tools/)
+  ```bash
+  minikube start
+  minikube kubectl # Use this to interact with the cluster, instead of `kubectl`
+  ```
 - Python 3.8+
 
 ## Getting Started
