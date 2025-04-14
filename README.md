@@ -106,3 +106,7 @@ Expected Endpoints (when working)
 - `GET /health`: Health check endpoint
 
 Good luck!
+
+#### 5. Bonus
+
+Can you use Helm & Helm Charts to deploy the application? If so, how?
