@@ -51,22 +51,9 @@ export DB_CONNECTION_STRING="postgresql://user:password@localhost:5432/weather_d
 cd app && python main.py
 ```
 
-#### Test
+### 1. Write a Dockerfile and build an image:
 
-```bash
-curl http://localhost:8000/weather/new%20york
-curl http://localhost:8000/health
-```
-
-### Building the Docker Image
-
-Write a Dockerfile and build an image:
-
-```bash
-docker build -t weather-api:v1 .
-```
-
-### Deploying to minikube
+### 2. Deploying to minikube
 
 1. Start minikube:
 
@@ -83,40 +70,36 @@ eval $(minikube docker-env)  # On Windows: minikube docker-env | Invoke-Expressi
 3. Build the image in minikube's environment:
 
 ```bash
-docker build -t weather-api:v1 .
+docker xxx xxxxxx
 ```
 
 4. Deploy to Kubernetes:
 
 ```bash
-kubectl apply -f kubernetes/deployment.yaml
+kubectl xxx xxxxxx
 ```
 
 5. Check the deployment:
 
 ```bash
-kubectl get pods
-kubectl get deployments
+kubectl xxx xxxxxx
+kubectl xxx xxxxxx
 ```
 
-6. Access the application (when it's working):
+### 3. Debugging, Fix and redeploy
 
 ```bash
-minikube service weather-api-service
+kubectl xxx xxxxxx
 ```
 
-## Debugging Tips
-
-If you encounter issues, check the pod logs:
+### 4. Test the application
 
 ```bash
-kubectl get pods
-kubectl logs <pod-name>
+curl http://localhost:8000/weather/new%20york
+curl http://localhost:8000/health
 ```
 
-After fixing issues, rebuild with a new tag and update your deployment as needed.
-
-## Expected Endpoints (when working)
+##### Expected Endpoints (when working)
 
 - `GET /`: Welcome message
 - `GET /weather/{city}`: Get weather forecast for a specific city
