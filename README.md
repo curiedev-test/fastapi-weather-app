@@ -47,9 +47,13 @@ export DB_CONNECTION_STRING="postgresql://user:password@localhost:5432/weather_d
 cd app && python main.py
 ```
 
-### 1. Write a Dockerfile and build an image:
+### Challenges
 
-### 2. Deploying to minikube
+#### 1. Write a Dockerfile for the application
+
+Create a Dockerfile in the root of the repository.
+
+#### 2. Deploying to minikube
 
 1. Start minikube:
 
@@ -82,20 +86,20 @@ kubectl xxx xxxxxx
 kubectl xxx xxxxxx
 ```
 
-### 3. Debugging, Fix and redeploy
+#### 3. Debugging, Fix and redeploy
 
 ```bash
 kubectl xxx xxxxxx
 ```
 
-### 4. Test the application
+#### 4. Test the application
 
 ```bash
 curl http://localhost:8000/weather/new%20york
 curl http://localhost:8000/health
 ```
 
-##### Expected Endpoints (when working)
+Expected Endpoints (when working)
 
 - `GET /`: Welcome message
 - `GET /weather/{city}`: Get weather forecast for a specific city
