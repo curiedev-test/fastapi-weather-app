@@ -95,18 +95,13 @@ kubectl xxx xxxxxx
 #### 4. Test the application
 
 ```bash
-curl http://localhost:8000/weather/new%20york
-curl http://localhost:8000/health
+curl $(minikube service weather-api-service --url)/health
+curl $(minikube service weather-api-service --url)/weather/new%20york
 ```
-
-Expected Endpoints (when working)
-
-- `GET /`: Welcome message
-- `GET /weather/{city}`: Get weather forecast for a specific city
-- `GET /health`: Health check endpoint
-
-Good luck!
 
 #### 5. Bonus
 
-Can you use Helm & Helm Charts to deploy the application? If so, how?
+1. Can you create a `public` namespace and deploy the application there? Instead of the `default` namespace.
+2. Can you use Helm & Helm Charts to deploy the application? If so, how?
+
+Good luck!
